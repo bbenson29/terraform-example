@@ -1,9 +1,9 @@
 variable "region" {
-  default = "us-west-2"
+  default = "eu-west-1"
 }
 
 variable "domain_name" {
-  default = "mikeball.me"
+  default = "bravebison.tech"
 }
 
 provider "aws" {
