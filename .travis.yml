@@ -1,40 +1,30 @@
 language: node_js
-
 node_js:
-  - 6.0.0
-
-# establish environment variables
+- 6.0.0
 env:
   global:
-    - GH_USER_NAME="TravisCI"
-    - GH_USER_EMAIL="mikedball@gmail.com"
-    - GH_REPO="mdb/terraform-example"
-    # encrypted GH_TOKEN and AWS credentials
-    - secure: "EBtNoRGUNjgom7lk6+O7Zh9A33X/251Cg7j5C+HqfkPMQcQwS6MEAXPT1vbnh1HoQixR1e6VTHdXxvWyE/14+98qtJiHnSbGiY67ZvQNDuFLb2+PKx7xhhl9heNj8Xk1K1SYJtfYQZIvZNl32V9db6eR3r7kKlWlpUVmnSnXrnm4ztI8se45OX/XPjAnARdBvkpbcTSprrAf7Qudc5R86ain18tJah6PICd12TIH4Cpdcr6CVL8kRK808VH+AS2oii7QcKXc084gBOJJLCiwa2DrcSEPOOk0AIn5ft+XVcaCsV6oOc6NliFKEPoJkaxbYWtunDlnqgB6epuaGrf99TfCg4E9R8sXBFqJwdMGDu3xM6Nddw87tMj/oCbUmjrNnl4qAxIMBD2TdjwFS1lNaXAML8W/jx3bNGSEg5MAYrqLL32eJta/vxRJwpCVnXUHxef9JcZMNZcvuKMdHC98JQIYbGRRFZ0cFtqMe63tgWafCi3WS+FIqSWnGdiKZ7dS110ANHaiQkDAZKTlh/9YJpzR9LyOoq7xXYtQIUovyDD2j498mAkcgByEbyZ39k6xMvLHHXsdUq25tdaMvqE3ZUASIDWqDk1QPfxkXX6n62Tj2X1HCA+3JI/DKyEfzt3QV4rntiP4Qv9jSuxNpd47rgsgVFg+HGJmko9QzAA/g+E="
-
-# install ruby sass/compass for use by gulp-node-sass
+  - GH_USER_NAME="bbenson29"
+  - GH_USER_EMAIL="bobbethelbenson@gmail.com"
+  - GH_REPO="bbenson29/terraform-example-master"
+  - secure: EBtNoRGUNjgom7lk6+O7Zh9A33X/251Cg7j5C+HqfkPMQcQwS6MEAXPT1vbnh1HoQixR1e6VTHdXxvWyE/14+98qtJiHnSbGiY67ZvQNDuFLb2+PKx7xhhl9heNj8Xk1K1SYJtfYQZIvZNl32V9db6eR3r7kKlWlpUVmnSnXrnm4ztI8se45OX/XPjAnARdBvkpbcTSprrAf7Qudc5R86ain18tJah6PICd12TIH4Cpdcr6CVL8kRK808VH+AS2oii7QcKXc084gBOJJLCiwa2DrcSEPOOk0AIn5ft+XVcaCsV6oOc6NliFKEPoJkaxbYWtunDlnqgB6epuaGrf99TfCg4E9R8sXBFqJwdMGDu3xM6Nddw87tMj/oCbUmjrNnl4qAxIMBD2TdjwFS1lNaXAML8W/jx3bNGSEg5MAYrqLL32eJta/vxRJwpCVnXUHxef9JcZMNZcvuKMdHC98JQIYbGRRFZ0cFtqMe63tgWafCi3WS+FIqSWnGdiKZ7dS110ANHaiQkDAZKTlh/9YJpzR9LyOoq7xXYtQIUovyDD2j498mAkcgByEbyZ39k6xMvLHHXsdUq25tdaMvqE3ZUASIDWqDk1QPfxkXX6n62Tj2X1HCA+3JI/DKyEfzt3QV4rntiP4Qv9jSuxNpd47rgsgVFg+HGJmko9QzAA/g+E=
+  - secure: vAEh/a2jSSafWrAX+pqtog25B0thqhR3F0gwutvMosz2MuziZ4IIWI7V5adtB7McI/WFjQA4ph7iBPuO4y78Gkzc+83tn8YX0kpDzPFvx4jJPUhH4deSGNJl5+5iKewvdosHW8EIf6BSQoJ/Bmj00xRc3xh9MxGg0FRU3Cep0nAxLInL5Lx6lJ7T955bijx3UtH34O4DqVK97ggyFmEwXGZUFzhHq6Z4r3ndo1FnROlhIagnUFYEMtvp8AxBVa1/JZGMsVINyM6oXSu31d4e/X/20S70vrH0F42XinmIx+343hvuOUrQnNV653mKLhZs7Hb/f941aF/gokRfPh1ecVBcHS1/4h2D1d2VhMEkdsOrEohe+W8mcIJnoOxY1ayLBi8fUJhNTbeXjOdCUy6l4Xv8cy7Bim/RS54l2CSGClMs8ESPimdV+SB+XTqK2txpdpBsakmWdi4k330h6Xdf5QLA+f4ssXOnHms1oaMBp9qMdMq2e9wbDi+1HEXuFygVE378XABErFlOe8t9GDFJs27ZCt5F4VGA1aJxNencAkQTY87chE+A44kt+a/xCVJerodIt46BEqFmpGimN4xsP2c+RoZ66JXe3nmOunlVuu0JZP0ESO7ztxk9+2SP/K6zZmt+3xyBelHOAI+/wsFgaOe7/P1IdAqyd1LuD0cCDXA=
 before_install:
-  - gem install sass -v 3.4.22
-  - gem install compass -v 1.0.3
-
+- gem install sass -v 3.4.22
+- gem install compass -v 1.0.3
 install:
-  - npm install
-
+- npm install
 script:
-  - npm run build
-
-# install terraform
+- npm run build
 before_deploy:
-  - curl -fSL "https://releases.hashicorp.com/terraform/0.6.15/terraform_0.6.15_linux_amd64.zip" -o terraform.zip
-  - sudo unzip terraform.zip -d /opt/terraform
-  - sudo ln -s /opt/terraform/terraform /usr/bin/terraform
-  - rm -f terraform.zip
-
-# terraform apply
+- curl -fSL "https://releases.hashicorp.com/terraform/0.6.15/terraform_0.6.15_linux_amd64.zip"
+  -o terraform.zip
+- sudo unzip terraform.zip -d /opt/terraform
+- sudo ln -s /opt/terraform/terraform /usr/bin/terraform
+- rm -f terraform.zip
 deploy:
-  - provider: script
-    skip_cleanup: true
-    script: "./deploy.sh"
-    on:
-      repo: mdb/terraform-example
-      branch: master
+- provider: script
+  skip_cleanup: true
+  script: ./deploy.sh
+  on:
+    repo: mdb/terraform-example
+    branch: master
